@@ -1,8 +1,7 @@
-Ansible role for setting XFCE GUI For Ubuntu 20.04
-
 ![Ubuntu](https://img.shields.io/badge/-ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 ![XFCE](https://img.shields.io/badge/-xfce-2284F2?style=for-the-badge&logo=xfce&logoColor=white)
 
+- Ansible role for setting XFCE GUI For Ubuntu 20.04
 - Based on the tutorial [How to Use a GUI with Ubuntu Linux on AWS EC2](https://www.youtube.com/watch?v=6x_okhl_CF4) which is based on an Amazon tutorial that by now is already deleted but the bash script exists in the video description 
 
 ```bash
@@ -28,6 +27,7 @@ sudo service xrdp restart
 
 sudo passwd ubuntu
 ```
+---
 
 ### How to use 
 
