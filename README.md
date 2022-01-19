@@ -4,6 +4,10 @@
 - Ansible role for setting XFCE GUI For Ubuntu 20.04
 - Based on the tutorial [How to Use a GUI with Ubuntu Linux on AWS EC2](https://www.youtube.com/watch?v=6x_okhl_CF4) which is based on an Amazon tutorial that by now is already deleted but the bash script exists in the video description 
 
+<details>
+<summary> Original Bash Script </summary>
+<p>
+
 ```bash
 #!/bin/bash
 sudo apt update -y &&  sudo apt upgrade -y
@@ -27,13 +31,18 @@ sudo service xrdp restart
 
 sudo passwd ubuntu
 ```
+
+</p>
+</details>
+
+
 ---
 
 ### How to use 
 
-- It's expected to pass the ubuntu password via the variable `ubuntu_password` so the full command to execute the role can be 
+- It's expected to pass the packer user password via the variable `packer_password` so the full command to execute the role can be 
 ```bash
-ansible-playbook xfce-ubuntu.yaml --extra-vars ubuntu_password=<password>
+ansible-playbook xfce-ubuntu.yaml --extra-vars packer_password=<password>
 ```
 - The role was made for AWS Ubuntu Instance, the security Group should enable RDP Port number **3389**
 - After the role is executed, you should be able to reach the instance using a remote desktop client tool like [`Remmina`](https://remmina.org/)
