@@ -15,12 +15,14 @@
     name: sshd
     state: restarted
 
-- name: Set Password for ubuntu user
+- name: Set Password for packer user
   user: 
-    name: ubuntu
-    password: "{{ ubuntu_password | password_hash('sha512') }}"
+    name: packer
+    password: "{{ packer_password | password_hash('sha512') }}"
     groups: admin 
     append: true
+    shell: /bin/bash
+    update_password: on_create
 
 - name: Install XFCE Without recommended packages 
   apt:
